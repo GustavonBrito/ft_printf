@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gustavo-linux <gustavo-linux@student.42    +#+  +:+       +#+        */
+/*   By: gserafio <gserafio@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/13 17:35:55 by marvin            #+#    #+#             */
-/*   Updated: 2024/10/21 23:15:20 by gustavo-lin      ###   ########.fr       */
+/*   Updated: 2024/11/07 22:27:39 by gserafio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,11 +37,3 @@ int	ft_atoi(const char *nptr)
 	}
 	return (result * sign);
 }
-
-// int	main(void)
-// {
-// 	char *int_to_convert = "\007 8";
-
-// 	printf("%d\n", ft_atoi(int_to_convert));
-// 	return (0);
-// }

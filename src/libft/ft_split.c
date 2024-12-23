@@ -3,39 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gustavo-linux <gustavo-linux@student.42    +#+  +:+       +#+        */
+/*   By: gserafio <gserafio@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/30 01:13:33 by gustavo-lin       #+#    #+#             */
-/*   Updated: 2024/11/09 13:27:54 by gustavo-lin      ###   ########.fr       */
+/*   Updated: 2024/11/07 22:52:56 by gserafio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
-
-size_t	ft_strlcpy(char *dst, const char *src, size_t size)
-{
-	unsigned int	i;
-	unsigned int	src_size;
-
-	src_size = 0;
-	i = 0;
-	while (src[i])
-	{
-		i++;
-		src_size++;
-	}
-	if (size == 0)
-		return (src_size);
-	i = 0;
-	while (src[i] && i < size - 1)
-	{
-		dst[i] = src[i];
-		i++;
-	}
-	dst[i] = '\0';
-	return (src_size);
-}
 
 static int	ft_count_words(const char *s, char c)
 {
@@ -97,7 +72,7 @@ char	**ft_split(char const *s, char c)
 	char	**array;
 	int		i;
 
-	array = malloc(sizeof(char *) * (ft_count_words(s, c)));
+	array = malloc(sizeof(char *) * (ft_count_words(s, c) + 1));
 	if (s == (void *)0 || array == (void *)0)
 		return (NULL);
 	i = 0;
@@ -105,7 +80,7 @@ char	**ft_split(char const *s, char c)
 	{
 		while (*s && *s == c)
 			s++;
-		if (!*s)
+		if (*s == '\0')
 			break ;
 		array[i] = ft_get_word(s, c);
 		if (array[i] == (void *)0)
@@ -116,19 +91,7 @@ char	**ft_split(char const *s, char c)
 		s += ft_word_len(s, c);
 		i++;
 	}
-	array[i] = '\0';
+	array[i] = (void *)0;
 	return (array);
 }
-int	main(void)
-{
-	char	**array;
-	int		a;
 
-	a = 0;
-	array = ft_split("_Gustavo_Serafio_Correa", '_');
-	while (array[a])
-	{
-		printf("%s ", array[a]);
-		a++;
-	}
-}

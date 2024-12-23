@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gustavo-linux <gustavo-linux@student.42    +#+  +:+       +#+        */
+/*   By: gserafio <gserafio@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/17 11:01:27 by marvin            #+#    #+#             */
-/*   Updated: 2024/10/21 20:23:03 by gustavo-lin      ###   ########.fr       */
+/*   Updated: 2024/11/07 22:31:04 by gserafio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,13 +39,3 @@ char	*ft_strrchr(char *s, int c)
 		return (s = &s[i]);
 	return (0);
 }
-
-// int	main(void)
-// {
-// 	char *hello = "tests";
-// 	int a = 1024 + 'e';
-
-// 	printf("%s", ft_strrchr(hello, a));
-// 	//printf("%s", strrchr(hello, a));
-// 	return (0);
-// }

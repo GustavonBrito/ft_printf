@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gustavo-linux <gustavo-linux@student.42    +#+  +:+       +#+        */
+/*   By: gserafio <gserafio@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 21:01:45 by gustavo-lin       #+#    #+#             */
-/*   Updated: 2024/11/07 04:10:01 by gustavo-lin      ###   ########.fr       */
+/*   Updated: 2024/11/07 22:30:50 by gserafio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,9 +31,3 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	str_with_func_applied[a] = '\0';
 	return (str_with_func_applied);
 }
-
-// int main(void)
-// {
-//     ft_strmapi();
-//     return (0);
-// }

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gustavo-linux <gustavo-linux@student.42    +#+  +:+       +#+        */
+/*   By: gserafio <gserafio@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 04:54:27 by gustavo-lin       #+#    #+#             */
-/*   Updated: 2024/11/07 05:12:16 by gustavo-lin      ###   ########.fr       */
+/*   Updated: 2024/11/07 22:29:01 by gserafio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,7 @@
 
 void	ft_putchar_fd(char c, int fd)
 {
+	if (fd < 0)
+		fd = -fd;
 	write(fd, &c, 1);
 }
-
-// int	main(void)
-// {
-// 	char a = 'G';
-// 	ft_putchar_fd(a, 1);
-// 	return (0);
-// }

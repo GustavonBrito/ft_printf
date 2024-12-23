@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gustavo-linux <gustavo-linux@student.42    +#+  +:+       +#+        */
+/*   By: gserafio <gserafio@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/20 13:34:03 by gustavo-lin       #+#    #+#             */
-/*   Updated: 2024/11/07 05:08:42 by gustavo-lin      ###   ########.fr       */
+/*   Updated: 2024/11/07 22:28:53 by gserafio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,19 +50,3 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	dest_unsigned = ft_strcpy(n, i, dest_unsigned, src_unsigned);
 	return ((unsigned char *)(dest_unsigned));
 }
-
-// int	main(void)
-// {
-// 	// char dest[] = "123456";
-
-// 	// Vamos copiar os primeiros 5 caracteres
-// 	//("Hello") para a posição que começa no índice 7
-// 	// Isso resultará em sobreposição,
-// 	// pois a área de destino se sobrepõe à área de origem.
-// 	unsigned char *test = ft_memmove(((void *)0), ((void *)0), 5);
-// 	// unsigned char *test1 = ft_memmove(dest + 2, dest, 0);
-
-// 	printf("Resultado: %s\n", test);
-// 	// printf("Resultado: %s\n", test1);
-// 	return (0);
-// }

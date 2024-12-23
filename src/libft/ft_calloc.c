@@ -6,7 +6,7 @@
 /*   By: gserafio <gserafio@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 22:44:54 by gustavo-lin       #+#    #+#             */
-/*   Updated: 2024/10/22 19:56:12 by gserafio         ###   ########.fr       */
+/*   Updated: 2024/11/07 22:28:00 by gserafio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,9 @@ void	*ft_calloc(size_t nmemb, size_t size)
 {
 	unsigned char	*pointer_malloc;
 
-	if (nmemb * size > 2147483647)
+	if (nmemb == 0 || size == 0)
+		return (malloc(0));
+	if (nmemb > (size_t)-1 / size)
 		return (NULL);
 	pointer_malloc = ((unsigned char *)(malloc(nmemb * size)));
 	if (pointer_malloc == NULL)
@@ -24,12 +26,3 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	pointer_malloc = ft_memset(pointer_malloc, 0, nmemb * size);
 	return (pointer_malloc);
 }
-
-// int	main(void)
-// {
-// 	int *p;
-
-// 	p = calloc(2, sizeof(int));
-// 	*p = 5000;
-// 	return (0);
-// }

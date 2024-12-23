@@ -3,17 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gustavo-linux <gustavo-linux@student.42    +#+  +:+       +#+        */
+/*   By: gserafio <gserafio@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/13 16:18:17 by marvin            #+#    #+#             */
-/*   Updated: 2024/12/22 19:22:05 by gustavo-lin      ###   ########.fr       */
+/*   Updated: 2024/11/07 22:47:46 by gserafio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <string.h>
-#include <unistd.h>
+#ifndef LIBFT_H
+# define LIBFT_H
 
+# include <stdlib.h>
+# include <unistd.h>
 
 int		ft_atoi(const char *nptr);
 int		ft_toupper(int c);
@@ -49,3 +50,5 @@ void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(char *s, int fd);
 void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
+
+#endif

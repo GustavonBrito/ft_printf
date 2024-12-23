@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gustavo-linux <gustavo-linux@student.42    +#+  +:+       +#+        */
+/*   By: gserafio <gserafio@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 19:30:48 by gustavo-lin       #+#    #+#             */
-/*   Updated: 2024/12/09 00:30:02 by gustavo-lin      ###   ########.fr       */
+/*   Updated: 2024/11/07 22:30:39 by gserafio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,17 +35,3 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 		return (src_size + size);
 	return (dest_size + src_size);
 }
-
-// int	main(void)
-// {
-// 	char dest[20] = "pqrstuvwxyz";
-// 	const char *src = "abcd";
-// 	size_t size;
-// 	size_t result;
-
-// 	size = sizeof(dest);
-// 	result = ft_strlcat(dest, src, size);
-// 	printf("Resultado: %s\n", dest);
-// 	printf("Comprimento total: %zu\n", result);
-// 	return (0);
-// }

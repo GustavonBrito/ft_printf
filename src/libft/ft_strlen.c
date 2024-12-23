@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gustavo-linux <gustavo-linux@student.42    +#+  +:+       +#+        */
+/*   By: gserafio <gserafio@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/13 18:11:08 by marvin            #+#    #+#             */
-/*   Updated: 2024/10/29 23:09:17 by gustavo-lin      ###   ########.fr       */
+/*   Updated: 2024/11/07 22:30:47 by gserafio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,11 +24,3 @@ size_t	ft_strlen(const char *s)
 	}
 	return (s_length);
 }
-
-// int	main(void)
-// {
-// 	char gustavo[] = "gustavo";
-
-// 	printf("%ld", ft_strlen(gustavo));
-// 	return (0);
-// }

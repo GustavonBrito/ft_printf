@@ -6,7 +6,7 @@
 /*   By: gserafio <gserafio@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 21:03:55 by gserafio          #+#    #+#             */
-/*   Updated: 2024/10/23 22:06:42 by gserafio         ###   ########.fr       */
+/*   Updated: 2024/11/07 22:28:48 by gserafio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,9 +30,3 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	}
 	return ((unsigned char *)(dest_unsigned));
 }
-
-// int main(void)
-// {
-// 	ft_memcpy((void *)0, (void *)0, 2);
-// 	return (0);
-// }

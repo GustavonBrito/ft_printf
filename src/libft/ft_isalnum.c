@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isalnum.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gustavo-linux <gustavo-linux@student.42    +#+  +:+       +#+        */
+/*   By: gserafio <gserafio@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 05:22:41 by marvin            #+#    #+#             */
-/*   Updated: 2024/10/14 23:46:36 by gustavo-lin      ###   ########.fr       */
+/*   Updated: 2024/11/07 22:28:04 by gserafio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,17 +20,3 @@ int	ft_isalnum(int c)
 		return (2);
 	return (0);
 }
-
-/*int main(void)
-{
-	int i;
-
-	char gustavo[] = "G12356a '\n'\t";
-	i = 0;
-	while (gustavo[i]) {
-		printf("meu %d", ft_isalnum(gustavo[i]));
-		printf("nativo %d\n", isalnum(gustavo[i]));
-		i++;
-	}
-	return (0);
-}*/

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gustavo-linux <gustavo-linux@student.42    +#+  +:+       +#+        */
+/*   By: gserafio <gserafio@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 08:38:36 by gustavo-lin       #+#    #+#             */
-/*   Updated: 2024/10/21 13:38:03 by gustavo-lin      ###   ########.fr       */
+/*   Updated: 2024/11/07 22:28:57 by gserafio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,13 +30,3 @@ void	*ft_memset(void *s, int c, size_t n)
 	}
 	return (s_unsigned);
 }
-
-// int	main(void)
-// {
-// 	char src[] = "gustavoaaa";
-// 	unsigned char *sla = ft_memset(src, 'g', 15);
-// 	//unsigned char *sla1 = memset(src, 'g', 15);
-// 	printf("%s\n", sla);
-// 	//printf("%s\n", sla1);
-// 	return (0);
-// }

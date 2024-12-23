@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gustavo-linux <gustavo-linux@student.42    +#+  +:+       +#+        */
+/*   By: gserafio <gserafio@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/19 18:27:15 by gustavo-lin       #+#    #+#             */
-/*   Updated: 2024/10/27 17:24:01 by gustavo-lin      ###   ########.fr       */
+/*   Updated: 2024/11/07 22:28:30 by gserafio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,11 +29,3 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	}
 	return (0);
 }
-
-// int main(void)
-// {
-// 	char arr[] = "Hello, world!";
-//     char *result = memchr(120, 123, 0);
-// 	printf("%c", *result);
-// 	return (0);
-// }

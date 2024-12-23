@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gustavo-linux <gustavo-linux@student.42    +#+  +:+       +#+        */
+/*   By: gserafio <gserafio@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 05:13:52 by gustavo-lin       #+#    #+#             */
-/*   Updated: 2024/11/07 05:19:06 by gustavo-lin      ###   ########.fr       */
+/*   Updated: 2024/11/07 22:29:17 by gserafio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ void	ft_putstr_fd(char *s, int fd)
 	int	a;
 
 	a = 0;
+	if (fd < 0)
+		fd = -fd;
 	if (s == (void *)0)
 		return ;
 	while (s[a])
@@ -25,9 +27,3 @@ void	ft_putstr_fd(char *s, int fd)
 		a++;
 	}
 }
-
-// int main(void)
-// {
-// 	ft_putstr_fd();
-// 	return (0);
-// }

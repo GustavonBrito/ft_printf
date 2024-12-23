@@ -3,30 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gustavo-linux <gustavo-linux@student.42    +#+  +:+       +#+        */
+/*   By: gserafio <gserafio@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 20:58:38 by gustavo-lin       #+#    #+#             */
-/*   Updated: 2024/11/07 05:58:36 by gustavo-lin      ###   ########.fr       */
+/*   Updated: 2024/11/07 22:31:16 by gserafio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
-// size_t	ft_strlen(const char *s)
-// {
-// 	size_t	s_length;
-
-// 	s_length = 0;
-// 	while (*s)
-// 	{
-// 		s_length++;
-// 		s++;
-// 	}
-// 	return (s_length);
-// }
-
-char	*ft_malloc_to_return(void)
+static char	*ft_malloc_to_return(void)
 {
 	char	*pointer_malloc;
 
@@ -61,11 +47,3 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	pointer_malloc[len] = '\0';
 	return ((char *)(pointer_malloc));
 }
-
-// int	main(void)
-// {
-// 	char *s = "";
-
-// 	printf("%s", ft_substr(s, 1, 1));
-// 	return (0);
-// }

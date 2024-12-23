@@ -3,23 +3,23 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gustavo-linux <gustavo-linux@student.42    +#+  +:+       +#+        */
+/*   By: gserafio <gserafio@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 05:22:41 by gustavo-lin       #+#    #+#             */
-/*   Updated: 2024/11/07 05:28:54 by gustavo-lin      ###   ########.fr       */
+/*   Updated: 2024/11/07 22:33:31 by gserafio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	check_int_limit(int limit)
+static int	check_int_limit(int limit)
 {
 	if (limit == -2147483648)
 		return (1);
 	return (0);
 }
 
-void	write_func(int size_number, char number[], int fd)
+static void	write_func(int size_number, char number[], int fd)
 {
 	while (size_number - 1 >= 0)
 	{
@@ -36,6 +36,8 @@ void	ft_putnbr_fd(int n, int fd)
 
 	size_number = 0;
 	result = 0;
+	if (fd < 0)
+		fd = -fd;
 	if (check_int_limit(n) == 1)
 		write(fd, "-2147483648", 11);
 	else if (n < 0)

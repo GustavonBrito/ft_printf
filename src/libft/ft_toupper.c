@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gustavo-linux <gustavo-linux@student.42    +#+  +:+       +#+        */
+/*   By: gserafio <gserafio@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/13 17:37:11 by marvin            #+#    #+#             */
-/*   Updated: 2024/10/15 00:10:31 by gustavo-lin      ###   ########.fr       */
+/*   Updated: 2024/11/07 22:31:28 by gserafio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,17 +16,3 @@ int	ft_toupper(int c)
 		return (c - 32);
 	return (c);
 }
-
-/*int main(void)
-{
-	int i;
-
-	char gustavo[] = "ana paula serafio brito";
-	i = 0;
-	while (gustavo[i]) {
-		printf("%c", ft_toupper(gustavo[i]));
-		i++;
-	}
-	printf("\n");
-	return (0);
-}*/

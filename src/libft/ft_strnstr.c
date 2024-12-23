@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gustavo-linux <gustavo-linux@student.42    +#+  +:+       +#+        */
+/*   By: gserafio <gserafio@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/17 13:07:43 by marvin            #+#    #+#             */
-/*   Updated: 2024/11/08 15:27:18 by gustavo-lin      ###   ########.fr       */
+/*   Updated: 2024/11/07 22:31:00 by gserafio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strncmp_modified(const char *s1, const char *s2, size_t n)
+static int	ft_strncmp_modified(const char *s1, const char *s2, size_t n)
 {
 	const unsigned char	*s1_unsigned;
 	const unsigned char	*s2_unsigned;
@@ -62,22 +62,3 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	}
 	return (0);
 }
-
-// int	main(void)
-// {
-//     const char *big;
-//     const char *little;
-//     const char *result;
-//     //Test case 1
-//     big = "aaxx";
-//     little = "xx";
-//     result = ft_strnstr(big, little, 4);
-//     printf("Result 1: %s\n", result); // Expected: "World!"
-// 	return (0);
-// }
-// }
-// }
-// }
-//if little occurs nowhere in big, NULL is returned
-// // int(const char *, const char *, size_t)
-// // int(const char *, const char *, long unsigned int)

@@ -6,12 +6,11 @@
 /*   By: gserafio <gserafio@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/13 18:56:26 by marvin            #+#    #+#             */
-/*   Updated: 2024/10/22 20:02:03 by gserafio         ###   ########.fr       */
+/*   Updated: 2024/11/07 22:30:53 by gserafio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
+#include "libft.h"
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
@@ -32,12 +31,3 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	}
 	return (s1_unsigned[i] - s2_unsigned[i]);
 }
-
-// int	main(void)
-// {
-// 	// printf("minha Compare 'abcdef' and 'abc\375xx' (3): %d\n",
-// 	// 	ft_strncmp("abcdef", "abc\375xx", 5));
-// 	printf("da loja ompare 'abcdef' and 'abc\375xx' (3): %d\n",
-// 		strncmp("abcdef", "abc\375xx", 5));
-// 	return (0);
-// }

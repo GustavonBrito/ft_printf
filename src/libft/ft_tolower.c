@@ -6,7 +6,7 @@
 /*   By: gserafio <gserafio@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/13 18:03:12 by marvin            #+#    #+#             */
-/*   Updated: 2024/10/22 19:56:55 by gserafio         ###   ########.fr       */
+/*   Updated: 2024/11/07 22:31:24 by gserafio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,16 +16,3 @@ int	ft_tolower(int c)
 		return (c + 32);
 	return (c);
 }
-
-/*int main(void)
-{
-	int i;
-
-	char gustavo[] = "GUSTAVO";
-	i = 0;
-	while (gustavo[i]) {
-		printf("%c", ft_tolower(gustavo[i]));
-		i++;
-	}
-	return (0);
-}*/

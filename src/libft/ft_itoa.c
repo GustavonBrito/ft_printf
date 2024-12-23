@@ -3,32 +3,32 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gustavo-linux <gustavo-linux@student.42    +#+  +:+       +#+        */
+/*   By: gserafio <gserafio@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/03 22:07:17 by gustavo-lin       #+#    #+#             */
-/*   Updated: 2024/11/06 02:36:16 by gustavo-lin      ###   ########.fr       */
+/*   Updated: 2024/11/07 21:53:41 by gserafio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_convert_number(int n, char *buffer_converted, int digits_counted)
+static char	*ft_convert_number(int n, char *convert_buff, int count_digit)
 {
 	int	temp_int;
 	int	i;
 
-	i = digits_counted;
+	i = count_digit;
 	if (n < 0)
 	{
-		buffer_converted[0] = '-';
+		convert_buff[0] = '-';
 		n = -n;
 	}
 	if (n == 0)
-		return (buffer_converted);
+		return (convert_buff);
 	temp_int = n % 10;
-	ft_convert_number(n / 10, buffer_converted, i - 1);
-	buffer_converted[i - 1] = temp_int + '0';
-	return (buffer_converted);
+	ft_convert_number(n / 10, convert_buff, i - 1);
+	convert_buff[i - 1] = temp_int + '0';
+	return (convert_buff);
 }
 
 static int	ft_count_digits(int n)

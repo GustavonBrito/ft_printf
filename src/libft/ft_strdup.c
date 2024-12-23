@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gustavo-linux <gustavo-linux@student.42    +#+  +:+       +#+        */
+/*   By: gserafio <gserafio@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/16 00:51:17 by gustavo-lin       #+#    #+#             */
-/*   Updated: 2024/12/17 14:43:26 by gustavo-lin      ###   ########.fr       */
+/*   Updated: 2024/11/07 22:30:27 by gserafio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,11 +37,3 @@ char	*ft_strdup(const char *s)
 	string_dup[s_size] = '\0';
 	return (string_dup);
 }
-
-// int	main(void)
-// {
-// 	char *s = "gustavo";
-// 	free(strdup(s));
-// 	printf("%s\n", strdup(s));
-// 	return (0);
-// }
