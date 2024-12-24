@@ -1,20 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gserafio <gserafio@student.42.fr>          +#+  +:+       +#+        */
+/*   By: gustavo-linux <gustavo-linux@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/13 16:24:45 by marvin            #+#    #+#             */
-/*   Updated: 2024/11/07 22:28:07 by gserafio         ###   ########.fr       */
+/*   Created: 2024/11/07 05:13:52 by gustavo-lin       #+#    #+#             */
+/*   Updated: 2024/12/24 19:59:59 by gustavo-lin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalpha(int c)
+#include "printf.h"
+
+void	ft_putstr_fd(char *s, int fd)
 {
-	if (c >= 'a' && c <= 'z')
-		return (2);
-	if (c >= 'A' && c <= 'Z')
-		return (1);
-	return (0);
+	int	a;
+
+	a = 0;
+	if (fd < 0)
+		fd = -fd;
+	if (s == (void *)0)
+		return ;
+	while (s[a])
+	{
+		write(fd, &s[a], 1);
+		a++;
+	}
 }

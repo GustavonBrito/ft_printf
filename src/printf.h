@@ -1,26 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   printf.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gserafio <gserafio@student.42.fr>          +#+  +:+       +#+        */
+/*   By: gustavo-linux <gustavo-linux@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/13 18:11:08 by marvin            #+#    #+#             */
-/*   Updated: 2024/11/07 22:30:47 by gserafio         ###   ########.fr       */
+/*   Created: 2024/12/22 17:18:25 by gustavo-lin       #+#    #+#             */
+/*   Updated: 2024/12/24 19:59:30 by gustavo-lin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#ifndef FT_PRINTF
+# define FT_PRINTF
 
-size_t	ft_strlen(const char *s)
-{
-	size_t	s_length;
+#include <stdarg.h>
+#include <unistd.h>
+#include <stdlib.h>
 
-	s_length = 0;
-	while (*s)
-	{
-		s_length++;
-		s++;
-	}
-	return (s_length);
-}
+void	ft_putchar_fd(char c, int fd);
+void	ft_putstr_fd(char *s, int fd);
+
+#endif
