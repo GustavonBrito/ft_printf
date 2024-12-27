@@ -6,7 +6,7 @@
 /*   By: gustavo-linux <gustavo-linux@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/22 18:10:22 by gustavo-lin       #+#    #+#             */
-/*   Updated: 2024/12/26 21:39:36 by gustavo-lin      ###   ########.fr       */
+/*   Updated: 2024/12/27 16:35:51 by gustavo-lin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,13 +23,7 @@ int	define_format(va_list va_list, int flag_definer)
 	if (flag_definer == 'c')
 		bytes_qty += ft_putchar_fd(va_arg(va_list, int), 1);
 	if (flag_definer == 'd' || flag_definer == 'i')
-		bytes_qty += ft_putnbr_fd(va_arg(va_list, int), 1);
-	if (flag_definer == 'p') // Imprime um ponteiro
-		bytes_qty += ft_putptr_fd(va_arg(va_list, char *), 1);
-	if (flag_definer == 'u') // Imprime um valor unsigned
-		bytes_qty += ft_putstr_fd(va_arg(va_list, char *), 1);
-	if (flag_definer == 'x' || flag_definer == 'X') //Imprime um inteiro em hexadecimal
-		bytes_qty += ft_putstr_fd(va_arg(va_list, char *), 1);
+		bytes_qty += ft_putnbr(va_arg(va_list, int));
 	return (bytes_qty);
 }
 
@@ -62,9 +56,11 @@ int	ft_printf(const char *char_array, ...)
 	return (final_bytes);
 }
 
-int	main(void)
-{
-	ft_printf(" NULL %s NULL ", NULL);
-	//printf(" NULL %p NULL ", NULL);
-	return (0);
-}
+// int	main(void)
+// {
+// 	int a;	
+// 	a = 0;
+// 	printf("%d\n", ft_printf(" %d ", -1));
+// 	printf("%d\n", printf(" %p ", &a));
+// 	return (0);	
+// }
