@@ -6,13 +6,13 @@
 /*   By: gustavo-linux <gustavo-linux@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 05:13:52 by gustavo-lin       #+#    #+#             */
-/*   Updated: 2024/12/24 19:59:59 by gustavo-lin      ###   ########.fr       */
+/*   Updated: 2024/12/26 00:41:19 by gustavo-lin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "printf.h"
+#include "ft_printf.h"
 
-void	ft_putstr_fd(char *s, int fd)
+int	ft_putstr_fd(char *s, int fd)
 {
 	int	a;
 
@@ -20,10 +20,11 @@ void	ft_putstr_fd(char *s, int fd)
 	if (fd < 0)
 		fd = -fd;
 	if (s == (void *)0)
-		return ;
+		return (0);
 	while (s[a])
 	{
 		write(fd, &s[a], 1);
 		a++;
 	}
+	return (a);
 }

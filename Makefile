@@ -2,7 +2,7 @@ CC = cc
 
 HEADER = ./src
 
-LIBFT_SRCS = src/ft_putchar_fd.c src/ft_putstr_fd.c
+LIBFT_SRCS = src/ft_putchar_fd.c src/ft_putstr_fd.c src/ft_putnbr_fd.c
 
 PRINTF_SRCS = src/ft_printf.c
 

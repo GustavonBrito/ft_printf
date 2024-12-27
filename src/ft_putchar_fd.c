@@ -6,15 +6,16 @@
 /*   By: gustavo-linux <gustavo-linux@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 04:54:27 by gustavo-lin       #+#    #+#             */
-/*   Updated: 2024/12/24 19:59:49 by gustavo-lin      ###   ########.fr       */
+/*   Updated: 2024/12/25 22:05:51 by gustavo-lin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "printf.h"
+#include "ft_printf.h"
 
-void	ft_putchar_fd(char c, int fd)
+int	ft_putchar_fd(char c, int fd)
 {
 	if (fd < 0)
 		fd = -fd;
 	write(fd, &c, 1);
+	return (1);
 }

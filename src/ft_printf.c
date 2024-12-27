@@ -6,35 +6,43 @@
 /*   By: gustavo-linux <gustavo-linux@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/22 18:10:22 by gustavo-lin       #+#    #+#             */
-/*   Updated: 2024/12/24 21:25:28 by gustavo-lin      ###   ########.fr       */
+/*   Updated: 2024/12/26 21:39:36 by gustavo-lin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "printf.h"
+#include "ft_printf.h"
+#include <stdio.h>
 
-int define_format(va_list va_list, int	flag_definer)
+int	define_format(va_list va_list, int flag_definer)
 {
+	int	bytes_qty;
+
+	bytes_qty = 0;
 	if (flag_definer == 's')
-		ft_putstr_fd(va_arg(va_list, char *), 1);
+		bytes_qty += ft_putstr_fd(va_arg(va_list, char *), 1);
 	if (flag_definer == 'c')
-		ft_putchar_fd((char)va_arg(va_list, int), 1);
-	if (flag_definer == 'p')
-		ft_putstr_fd(va_arg(va_list, char *), 1);
+		bytes_qty += ft_putchar_fd(va_arg(va_list, int), 1);
 	if (flag_definer == 'd' || flag_definer == 'i')
-		ft_putstr_fd(va_arg(va_list, char *), 1);
-	if (flag_definer == 'x' || flag_definer == 'X')
-		ft_putstr_fd(va_arg(va_list, char *), 1);
-	return (0);	
+		bytes_qty += ft_putnbr_fd(va_arg(va_list, int), 1);
+	if (flag_definer == 'p') // Imprime um ponteiro
+		bytes_qty += ft_putptr_fd(va_arg(va_list, char *), 1);
+	if (flag_definer == 'u') // Imprime um valor unsigned
+		bytes_qty += ft_putstr_fd(va_arg(va_list, char *), 1);
+	if (flag_definer == 'x' || flag_definer == 'X') //Imprime um inteiro em hexadecimal
+		bytes_qty += ft_putstr_fd(va_arg(va_list, char *), 1);
+	return (bytes_qty);
 }
 
 int	ft_printf(const char *char_array, ...)
 {
-	va_list va_list;
-	int	i;
-	
+	va_list	va_list;
+	int		final_bytes;
+	int		i;
+
 	i = 0;
+	final_bytes = 0;
 	if (!char_array)
-		return -1;
+		return (-1);
 	va_start(va_list, char_array);
 	while (char_array[i])
 	{
@@ -42,18 +50,21 @@ int	ft_printf(const char *char_array, ...)
 		{
 			i++;
 			if (char_array[i] == '%')
-				ft_putchar_fd(char_array[i], 1);
+				final_bytes += ft_putchar_fd(char_array[i], 1);
 			else
-				define_format(va_list, char_array[i]);
+				final_bytes += define_format(va_list, char_array[i]);
 		}
+		else
+			final_bytes += ft_putchar_fd(char_array[i], 1);
 		i++;
 	}
 	va_end(va_list);
-	return (0);
+	return (final_bytes);
 }
 
-int main(void)
+int	main(void)
 {
-	ft_printf("%s, %c", "merda ", 's');
+	ft_printf(" NULL %s NULL ", NULL);
+	//printf(" NULL %p NULL ", NULL);
 	return (0);
 }
