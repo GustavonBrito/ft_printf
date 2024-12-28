@@ -6,24 +6,24 @@
 /*   By: gustavo-linux <gustavo-linux@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/25 23:42:40 by gustavo-lin       #+#    #+#             */
-/*   Updated: 2024/12/27 13:23:09 by gustavo-lin      ###   ########.fr       */
+/*   Updated: 2024/12/27 17:09:08 by gustavo-lin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-static void	define_size_to_return(int number, int *size_to_return)
+static void	define_size_to_return(int number, int *bytes_counted)
 {
-	*size_to_return = 0;
+	*bytes_counted = 0;
 	if (number <= 0)
-		*size_to_return += 1;
+		*bytes_counted += 1;
 }
 
-static int	check_int_limit(int limit, int *size_to_return)
+static int	check_int_limit(int limit, int *bytes_counted)
 {
 	if (limit == -2147483648)
 	{
-		*size_to_return = 11;
+		*bytes_counted = 11;
 		return (1);
 	}
 	return (0);
@@ -44,11 +44,11 @@ int	ft_putnbr(int n)
 	char	number[11];
 	int		size_number;
 	int		result;
-	int		size_to_return;
+	int		bytes_counted;
 
 	size_number = 0;
-	define_size_to_return(n, &size_to_return);
-	if (check_int_limit(n, &size_to_return) == 1)
+	define_size_to_return(n, &bytes_counted);
+	if (check_int_limit(n, &bytes_counted) == 1)
 		write(1, "-2147483648", 11);
 	else if (n < 0)
 	{
@@ -64,5 +64,5 @@ int	ft_putnbr(int n)
 		n = n / 10;
 		size_number++;
 	}
-	return (write_func(size_number, number, 1), size_to_return += size_number);
+	return (write_func(size_number, number, 1), bytes_counted += size_number);
 }
