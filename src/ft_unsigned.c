@@ -6,7 +6,7 @@
 /*   By: gustavo-linux <gustavo-linux@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/29 00:01:09 by gustavo-lin       #+#    #+#             */
-/*   Updated: 2024/12/29 00:47:02 by gustavo-lin      ###   ########.fr       */
+/*   Updated: 2024/12/29 01:04:05 by gustavo-lin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,9 @@ static int	write_func(int size_number, char number[], int fd)
 	return (size_number);
 }
 
-int	ft_unsigned(unsigned long long n)
+int	ft_unsigned(unsigned int n)
 {
-	char	number[20];
+	char	number[10];
 	int		size_number;
 	int		result;
 	int		bytes_count;

@@ -6,7 +6,7 @@
 /*   By: gustavo-linux <gustavo-linux@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/22 18:10:22 by gustavo-lin       #+#    #+#             */
-/*   Updated: 2024/12/29 00:41:07 by gustavo-lin      ###   ########.fr       */
+/*   Updated: 2024/12/29 02:53:54 by gustavo-lin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,9 @@ int	define_format(va_list va_list, int flag_definer)
 	if (flag_definer == 'd' || flag_definer == 'i')
 		bytes_qty += ft_putnbr(va_arg(va_list, int));
 	if (flag_definer == 'u')
-		bytes_qty += ft_unsigned(va_arg(va_list, unsigned long long));
+		bytes_qty += ft_unsigned(va_arg(va_list, unsigned int));
+	if (flag_definer == 'x' || flag_definer == 'X')
+		bytes_qty += ft_to_hex(va_arg(va_list, unsigned int), 1, flag_definer);
 	return (bytes_qty);
 }
 
@@ -61,10 +63,10 @@ int	ft_printf(const char *char_array, ...)
 
 // int	main(void)
 // {
-// 	unsigned long long	b;
+// 	int	b;
 
-// 	b = LONG_MIN;
-// 	ft_printf(" %d ", ft_printf(" %u ", b));
-// 	printf(" %d ", printf(" %llu ", b));
+// 	b = 42;
+// 	ft_printf(" %d \n", ft_printf(" %x ", b));
+// 	printf(" %d \n", printf(" %x ", b));
 // 	return (0);
 // }
