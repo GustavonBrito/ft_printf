@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putptr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_unsigned.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gustavo-linux <gustavo-linux@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/27 16:43:38 by gustavo-lin       #+#    #+#             */
-/*   Updated: 2024/12/28 23:37:56 by gustavo-lin      ###   ########.fr       */
+/*   Created: 2024/12/29 00:01:09 by gustavo-lin       #+#    #+#             */
+/*   Updated: 2024/12/29 00:47:02 by gustavo-lin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 
 static int	write_func(int size_number, char number[], int fd)
 {
-	write (fd, "0x", 2);
 	while (size_number - 1 >= 0)
 	{
 		write(fd, &number[size_number - 1], 1);
@@ -23,30 +22,27 @@ static int	write_func(int size_number, char number[], int fd)
 	return (size_number);
 }
 
-int	ft_putptr_fd(uintptr_t n, int fd)
+int	ft_unsigned(unsigned long long n)
 {
-	char			number_hex[16];
-	int				size_number;
-	int				result;
-	int				bytes_counted;
+	char	number[20];
+	int		size_number;
+	int		result;
+	int		bytes_count;
 
 	size_number = 0;
-	bytes_counted = 2;
-	if (!n)
+	bytes_count = 0;
+	number[0] = '\0';
+	if (n == 0)
 	{
-		write (fd, "(nil)", 5);
-		return (5);
+		write (1, "0", 1);
+		bytes_count = 1;
 	}
 	while (n > 0)
 	{
-		result = n % 16;
-		if (result >= 0 && result <= 9)
-			number_hex[size_number] = result + '0';
-		else
-			number_hex[size_number] = result - 10 + 'a';
+		result = n % 10;
+		number[size_number] = result + '0';
+		n = n / 10;
 		size_number++;
-		n = n / 16;
 	}
-	return (write_func(size_number, number_hex, fd)
-		, bytes_counted += size_number);
+	return (write_func(size_number, number, 1), bytes_count += size_number);
 }

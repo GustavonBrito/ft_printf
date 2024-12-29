@@ -6,12 +6,11 @@
 /*   By: gustavo-linux <gustavo-linux@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/22 18:10:22 by gustavo-lin       #+#    #+#             */
-/*   Updated: 2024/12/28 00:36:45 by gustavo-lin      ###   ########.fr       */
+/*   Updated: 2024/12/29 00:41:07 by gustavo-lin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-#include <stdio.h>
 
 int	define_format(va_list va_list, int flag_definer)
 {
@@ -23,9 +22,11 @@ int	define_format(va_list va_list, int flag_definer)
 	if (flag_definer == 'c')
 		bytes_qty += ft_putchar_fd(va_arg(va_list, int), 1);
 	if (flag_definer == 'p')
-		bytes_qty += ft_putptr_fd(va_arg(va_list, void *), 1);
+		bytes_qty += ft_putptr_fd(va_arg(va_list, uintptr_t), 1);
 	if (flag_definer == 'd' || flag_definer == 'i')
 		bytes_qty += ft_putnbr(va_arg(va_list, int));
+	if (flag_definer == 'u')
+		bytes_qty += ft_unsigned(va_arg(va_list, unsigned long long));
 	return (bytes_qty);
 }
 
@@ -58,11 +59,12 @@ int	ft_printf(const char *char_array, ...)
 	return (final_bytes);
 }
 
-int	main(void)
-{
-	int a;	
-	a = 0;
-	ft_printf("%p", &a);
-	//printf("%d\n", printf(" %p ", &a));
-	return (0);	
-}
+// int	main(void)
+// {
+// 	unsigned long long	b;
+
+// 	b = LONG_MIN;
+// 	ft_printf(" %d ", ft_printf(" %u ", b));
+// 	printf(" %d ", printf(" %llu ", b));
+// 	return (0);
+// }
