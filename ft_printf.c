@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gustavo-linux <gustavo-linux@student.42    +#+  +:+       +#+        */
+/*   By: gserafio <gserafio@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/22 18:10:22 by gustavo-lin       #+#    #+#             */
-/*   Updated: 2024/12/29 02:53:54 by gustavo-lin      ###   ########.fr       */
+/*   Updated: 2024/12/29 11:20:00 by gserafio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,13 +60,3 @@ int	ft_printf(const char *char_array, ...)
 	va_end(va_list);
 	return (final_bytes);
 }
-
-// int	main(void)
-// {
-// 	int	b;
-
-// 	b = 42;
-// 	ft_printf(" %d \n", ft_printf(" %x ", b));
-// 	printf(" %d \n", printf(" %x ", b));
-// 	return (0);
-// }
