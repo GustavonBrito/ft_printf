@@ -77,7 +77,7 @@ cd src
 
 ### 8. Compile seu projeto com o seguinte comando:
 ```bash
-cc -o arquivo_de_saida src/ft_printf.c libftprintf.a
+cc -o arquivo_de_saida src/ft_printf.c src/libftprintf.a
 ```
 
 ### 9. Execute o projeto:

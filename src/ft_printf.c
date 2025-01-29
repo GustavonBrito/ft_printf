@@ -6,7 +6,7 @@
 /*   By: gustavo-linux <gustavo-linux@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/22 18:10:22 by gustavo-lin       #+#    #+#             */
-/*   Updated: 2025/01/29 10:18:49 by gustavo-lin      ###   ########.fr       */
+/*   Updated: 2025/01/29 10:23:19 by gustavo-lin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,4 +59,10 @@ int	ft_printf(const char *char_array, ...)
 	}
 	va_end(va_list);
 	return (final_bytes);
+}
+
+int main(void)
+{
+	ft_printf("\nHello World");
+	return (0);
 }
