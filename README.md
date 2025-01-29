@@ -1,5 +1,5 @@
 ![C](https://img.shields.io/badge/C-00599C?style=for-the-badge&logo=c&logoColor=white)
-![Makefile](https://img.shields.io/badge/Build-Makefile-blue?style=for-the-badge&logo=gnu&logoColor=white)
+![Makefile](https://img.shields.io/badge/Makefile-blue?style=for-the-badge&logo=gnu&logoColor=white)
 
 
 ## Indice 
