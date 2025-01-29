@@ -1,10 +1,10 @@
 CC = cc
 
-HEADER = ./src
+HEADER = ./
 
-LIBFT_SRCS = src/ft_putchar_fd.c src/ft_putstr_fd.c src/ft_putnbr.c src/ft_putptr_fd.c src/ft_unsigned.c src/ft_to_hex.c
+LIBFT_SRCS = ft_putchar_fd.c ft_putstr_fd.c ft_putnbr.c ft_putptr_fd.c ft_unsigned.c ft_to_hex.c
 
-PRINTF_SRCS = src/ft_printf.c
+PRINTF_SRCS = ft_printf.c
 
 SRCS = $(LIBFT_SRCS) $(PRINTF_SRCS)
 
